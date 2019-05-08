@@ -12,7 +12,8 @@ postToDiscord = async function(message){
       await request({
         uri: webhookurl,
         method: "POST",
-        content: '```xl\n'+message.substring(0,2000)+'\n```'
+        json: true,
+        body: { content: '```xl\n'+message.substring(0,2000)+'\n```' }
       });
       message = message.substring(2000);
     }
@@ -22,7 +23,8 @@ postToDiscord = async function(message){
     return await request({
         uri: webhookurl,
         method: "POST",
-        content: '```xl\n'+message+'\n```'
+        json: true,
+        body: { content: '```xl\n'+message.substring(0,2000)+'\n```' }
       });
   }
 }
