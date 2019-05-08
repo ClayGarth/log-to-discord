@@ -1,5 +1,3 @@
-#Changed 2 lines as per the advice in this post
-https://www.reddit.com/r/discordapp/comments/azwl9c/webhook_that_tails_a_logfile/
 
 # log-to-discord
 Tails 
@@ -13,3 +11,6 @@ Download the package and then either pass the webhookurl and logfile as env or e
 if you code the webhook url and logfile path into the index.js file then  
 
     node index.js
+
+#### Changed 2 lines as per the advice in this post
+https://www.reddit.com/r/discordapp/comments/azwl9c/webhook_that_tails_a_logfile/
