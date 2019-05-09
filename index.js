@@ -5,6 +5,14 @@ const Tail = require('tail').Tail;
 let logp = new Tail(logfile,{follow: true});
 
 postToDiscord = async function(message){
+    //Send initial length of message as a message for debugging purposes
+    await request({
+        uri: webhookurl,
+        method: "POST",
+        json: true,
+        body: { content: '```xl\n'+message.length+'\n```' }
+    });
+  
   if(message.length>=2000)
   {
     while(message.length>=2000)
